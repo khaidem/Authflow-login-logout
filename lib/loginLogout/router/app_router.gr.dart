@@ -31,6 +31,10 @@ class AppRouter extends _i3.RootStackRouter {
     SigupRoute.name: (routeData) {
       return _i3.MaterialPageX<dynamic>(
           routeData: routeData, child: const _i2.SigupPage());
+    },
+    HomeRoute.name: (routeData) {
+      return _i3.MaterialPageX<dynamic>(
+          routeData: routeData, child: const _i2.HomePage());
     }
   };
 
@@ -42,7 +46,9 @@ class AppRouter extends _i3.RootStackRouter {
           _i3.RouteConfig(LoginRoute.name,
               path: 'login-page', parent: AuthFlow.name),
           _i3.RouteConfig(SigupRoute.name,
-              path: 'sigup-page', parent: AuthFlow.name)
+              path: 'sigup-page', parent: AuthFlow.name),
+          _i3.RouteConfig(HomeRoute.name,
+              path: 'home-page', parent: AuthFlow.name)
         ])
       ];
 }
@@ -70,4 +76,12 @@ class SigupRoute extends _i3.PageRouteInfo<void> {
   const SigupRoute() : super(SigupRoute.name, path: 'sigup-page');
 
   static const String name = 'SigupRoute';
+}
+
+/// generated route for
+/// [_i2.HomePage]
+class HomeRoute extends _i3.PageRouteInfo<void> {
+  const HomeRoute() : super(HomeRoute.name, path: 'home-page');
+
+  static const String name = 'HomeRoute';
 }

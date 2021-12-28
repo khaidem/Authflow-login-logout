@@ -12,6 +12,8 @@ import '../pages/pages.dart';
       children: [
         AutoRoute(page: LoginPage),
         AutoRoute(page: SigupPage),
+        AutoRoute(page: HomePage),
+        // AutoRoute(page: SigupPage),
       ],
     ),
   ],
