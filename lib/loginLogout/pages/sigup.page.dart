@@ -1,4 +1,6 @@
+import 'package:day20/loginLogout/logic/cubit/authflow_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SigupPage extends StatefulWidget {
   const SigupPage({Key? key}) : super(key: key);
@@ -13,7 +15,8 @@ class _SigupPageState extends State<SigupPage> {
   final _userEmail = '';
   final _userName = '';
   final _userPassword = '';
-  String name = "";
+  String name = '';
+
   @override
   Widget build(BuildContext context) {
     final double height = MediaQuery.of(context).size.height;
@@ -96,7 +99,9 @@ class _SigupPageState extends State<SigupPage> {
               ),
               const SizedBox(height: 12),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.read<AuthflowCubit>().signup('', '');
+                },
                 child: const Text('Log in'),
               ),
             ],

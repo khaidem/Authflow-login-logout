@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:day20/loginLogout/logic/cubit/authflow_cubit.dart';
-import 'package:day20/loginLogout/pages/home.page.dart';
 import 'package:day20/loginLogout/router/app_router.gr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -30,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  'Social App',
+                  'Logo',
                   style: TextStyle(
                       color: Colors.blue,
                       fontWeight: FontWeight.w500,

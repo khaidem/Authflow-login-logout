@@ -16,23 +16,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiRepoWrapper(
-      child: MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (context) => AuthflowCubit(),
-          ),
-          BlocProvider(create: (context) => NewsfeedCubit(repo: newsfeedRepo)),
-        ],
-        child: MaterialApp.router(
-          routerDelegate: appRouter.delegate(),
-          routeInformationParser: appRouter.defaultRouteParser(),
-          title: 'Flutter Demo',
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
-          debugShowCheckedModeBanner: false,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => AuthflowCubit(),
         ),
+        BlocProvider(create: (context) => NewsfeedCubit(repo: newsfeedRepo)),
+      ],
+      child: MaterialApp.router(
+        routerDelegate: appRouter.delegate(),
+        routeInformationParser: appRouter.defaultRouteParser(),
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        debugShowCheckedModeBanner: false,
       ),
     );
   }
